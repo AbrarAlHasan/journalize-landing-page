@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Montserrat", sans-serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-mono: "Montserrat", sans-serif;
+
+  --color-ink: #050508;
+  --color-bg: #0a0a0a;
+  --color-surface: #171717;
+  --color-surface-2: #262626;
+  --color-primary: #60a5fa;
+  --color-primary-deep: #2563eb;
+  --color-profit: #4ade80;
+  --color-profit-dim: #14532d;
+  --color-loss: #f87171;
+  --color-loss-dim: #7f1d1d;
+  --color-muted: #a3a3a3;
+  --color-faint: #737373;
+  --color-line: #262626;
+  --color-text: #f8fafc;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: #050508;
+  color: #f8fafc;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.35);
+  color: #fff;
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.scene-veil {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 1;
+  background: rgba(5, 5, 8, 0.2);
+  backdrop-filter: blur(2px) saturate(1.04);
+  -webkit-backdrop-filter: blur(2px) saturate(1.04);
+}
+
+.legal-body {
+  color: #d4d4d4;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.legal-body h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: #f8fafc;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.legal-body p,
+.legal-body ul {
+  margin-bottom: 1rem;
+}
+
+.legal-body ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.legal-body li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-body a {
+  color: #60a5fa;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-body a:hover {
+  color: #93c5fd;
+}
+
+.legal-body code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  color: #e5e5e5;
+}
+
+.app-screen {
+  background: #0a0a0a;
+  color: #f8fafc;
+}
+
+.app-surface {
+  background: #171717;
+  border: 1px solid #262626;
+}
+
+.app-profit {
+  color: #4ade80;
+}
+
+.app-loss {
+  color: #f87171;
+}
+
+.app-profit-bg {
+  background: #14532d;
+}
+
+.app-loss-bg {
+  background: #7f1d1d;
+}
