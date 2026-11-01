@@ -30,7 +30,7 @@ function Effects() {
 
 export function SceneCanvas() {
   return (
-    <div className="pointer-events-none fixed inset-0 z-0">
+    <div className="scene-canvas pointer-events-none fixed inset-0 z-0">
       <Canvas
         dpr={[1, 1.6]}
         camera={{ position: [0.2, 1.05, 7.5], fov: 45, near: 0.1, far: 60 }}
